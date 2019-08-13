@@ -6,8 +6,8 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 
-FB_LOGIN_EMAIL = "youremail@gmail.com"
-FB_LOGIN_PASSWORD = "yourPassword123"
+FB_LOGIN_EMAIL = "your-email@gmail.com"
+FB_LOGIN_PASSWORD = "your-password123"
 
 
 def main():
@@ -25,6 +25,7 @@ def login_to_facebook():
     chromeOptions.add_experimental_option("prefs", prefs)
     chromeOptions.add_argument(" — incognito")
     # chromeOptions.add_argument('headless')
+
     driver = webdriver.Chrome(executable_path='chromedriver', options=chromeOptions)
 
     driver.get('https://www.facebook.com/')
